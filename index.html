@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f3eb">
+<meta name="description" content="yingsuet_portfolio — 新聞寫作、資訊圖像及多媒體內容製作作品集。Journalism, editorial graphics and multimedia storytelling.">
+<meta property="og:title" content="yingsuet_portfolio — Journalism & Multimedia">
+<meta property="og:description" content="Selected work in news graphics, information design and video editing.">
+<meta property="og:type" content="website">
+<title>yingsuet_portfolio — Journalism & Multimedia</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23a64725'/%3E%3Ctext x='32' y='44' font-size='46' font-family='Georgia' text-anchor='middle' fill='%23f7f3eb'%3Ey%3C/text%3E%3C/svg%3E">
+<style>
+/* Newspaper palette, type and spacing. */
+:root{--paper:#f7f3eb;--ink:#29251f;--muted:#6d6259;--line:#cbbfb2;--soft:#ede5da;--accent:#a64725;--deep:#853719;--white:#fffaf3;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;--serif:Georgia,"Times New Roman","Songti TC","Noto Serif TC",serif;--text:16px;--small:12px;--display:clamp(58px,10.5vw,144px);--heading:clamp(32px,4.5vw,56px);--space:clamp(20px,3vw,40px);--section:clamp(48px,6vw,80px);--max:1320px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:135px}body{margin:0;background:var(--paper);color:var(--ink);font:var(--text)/1.65 var(--sans);-webkit-font-smoothing:antialiased}body.locked{overflow:hidden}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;border-radius:0}a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}button:disabled{cursor:default}button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}::selection{background:var(--accent);color:var(--paper)}[hidden]{display:none!important}.wrap{max-width:var(--max);padding-inline:var(--space);margin:auto}.skip{position:fixed;left:20px;top:-100px;z-index:100;background:var(--ink);color:white;padding:12px}.skip:focus{top:10px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.eyebrow,.section-no{font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:600}.section-no{color:var(--accent)}.serif{font-family:var(--serif);font-weight:400}.muted{color:var(--muted)}.section{padding-block:var(--section)}.link{display:inline-flex;align-items:center;gap:24px;padding:8px 0;border-bottom:1px solid;font-size:12px}.link:hover{color:var(--accent)}.plain-button{border:0;background:none;text-align:left;padding:0}
+/* Blank masthead space above the section navigation. */
+.masthead-space{height:60px;width:100%}
+.header{position:sticky;top:0;z-index:20;background:var(--paper)}.nav{position:relative;min-height:108px;display:flex;flex-direction:column;justify-content:center}.brand{font:600 24px/1.1 var(--serif);letter-spacing:-.055em;color:var(--accent);padding:19px 0 15px;white-space:nowrap}.brand span{color:var(--accent)}.nav-end{width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:center;align-items:center}.navigation{display:flex;gap:36px;align-items:center}.navigation a{font-size:11px;position:relative;padding:10px 0}.navigation a:after{content:"";position:absolute;bottom:0;left:0;right:100%;height:2px;background:var(--accent);transition:right .2s}.navigation a:hover,.navigation a.active{color:var(--accent)}.navigation a:hover:after,.navigation a.active:after{right:0}.lang{position:absolute;right:var(--space);top:11px;border:0;background:none;padding:10px;font-size:11px;min-height:44px;min-width:44px}.menu{display:none;background:none;border:0;padding:10px;min-height:44px}.edition{position:absolute;left:var(--space);top:24px;font-size:9px;letter-spacing:.12em;color:var(--muted)}
+/* Front-page title; profile stays the first numbered section. */
+.hero{padding-block:32px 24px;text-align:center;border-bottom:3px double var(--accent)}.hero h1{font:400 var(--display)/1 var(--serif);letter-spacing:-.065em;color:var(--accent);margin:0 0 21px}.hero-strip{display:flex;justify-content:space-between;align-items:center;gap:18px;font-size:10px;letter-spacing:.1em}.hero-strip p{margin:0}.hero-strip a{border-bottom:1px solid var(--accent);color:var(--accent);padding:5px 0;white-space:nowrap}.about{padding-block:30px 40px}.about-grid{display:grid;grid-template-columns:.65fr 2fr;gap:32px}.about-heading{border-right:1px solid var(--line);padding-right:28px}.about h2{font:400 34px/1.2 var(--serif);letter-spacing:-.03em;color:var(--accent);margin:12px 0}.about-note{font-size:11px;color:var(--muted);max-width:190px;margin:16px 0 0}.about-copy{display:grid;grid-template-columns:1.25fr 1fr;gap:30px}.about-text p{font-size:13px;line-height:1.95;margin:0}.about-text p+p{font-size:12px;color:var(--muted);margin-top:12px}.skill-groups{border-left:1px solid var(--line);padding-left:25px;display:flex;flex-direction:column;gap:15px}.skill-groups h3{font-size:10px;letter-spacing:.08em;margin:0 0 8px;text-transform:uppercase}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10px;border:1px solid var(--line);padding:3px 8px;border-radius:20px}
+/* Unequal newspaper columns, followed by the full work index. */
+#work{padding-top:12px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;border-top:1px solid var(--accent);padding-top:18px;margin-bottom:25px}.section-head h2{font:400 var(--heading)/1.1 var(--serif);letter-spacing:-.045em;margin:8px 0 0;color:var(--accent)}.section-head p{max-width:330px;color:var(--muted);font-size:12px;margin:0}.front-grid{display:grid;grid-template-columns:1.4fr 1fr .85fr;gap:24px;margin-bottom:48px;align-items:start}.front-column{min-width:0;border-left:1px solid var(--line);padding-left:24px}.news-image{border:0;background:none;padding:0;width:100%;display:block;overflow:hidden}.news-image img{width:100%;height:auto;transition:transform .35s}.news-image:hover img{transform:scale(1.015)}.news-kicker{font-size:9px;letter-spacing:.06em;text-transform:uppercase;margin:13px 0 6px;color:var(--accent)}.news-title{font:400 25px/1.35 var(--serif);margin:0;letter-spacing:-.025em}.news-title button:hover{color:var(--accent)}.news-summary{font-size:12px;line-height:1.85;color:var(--muted);margin:10px 0 0}.lead-story .news-title{font-size:32px}.orange-story{background:var(--accent);color:var(--paper);padding:15px}.orange-story .news-kicker,.orange-story .news-summary{color:var(--paper)}.orange-story .news-title{font-size:24px}.orange-story .news-title button:hover{color:white;text-decoration:underline}.brief{border-top:1px solid var(--line);margin-top:23px;padding-top:5px}.brief .news-title{font-size:22px}.front-column .news-title{font-size:21px}.story-jump{margin-top:16px;display:flex;justify-content:space-between;align-items:center;font-size:10px;padding-bottom:9px;border-bottom:1px solid var(--line);color:var(--accent)}.story-jump button{border:0;background:none;padding:0;font-size:20px;min-width:44px;min-height:44px}.archive-head{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:3px double var(--line);padding-top:20px;margin-bottom:18px}.archive-head h3{font:400 25px var(--serif);color:var(--accent);margin:0}.archive-head span{font-size:10px;letter-spacing:.08em;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}.filter{border:1px solid var(--line);border-radius:24px;background:none;padding:7px 16px;font-size:11px;min-height:38px}.filter:hover{border-color:var(--accent)}.filter[aria-pressed=true]{background:var(--accent);color:var(--paper);border-color:var(--accent)}.work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 24px}.work-card{min-width:0;border-bottom:1px solid var(--line);padding-bottom:20px}.work-cover{display:block;border:0;padding:0;width:100%;background:var(--soft);position:relative;overflow:hidden}.work-cover img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;transition:transform .35s}.work-cover:hover img{transform:scale(1.015)}.work-arrow{position:absolute;bottom:10px;right:10px;background:var(--paper);color:var(--accent);width:32px;height:32px;display:grid;place-items:center}.work-meta{display:flex;justify-content:space-between;gap:12px;margin-top:14px}.work-meta h3{font:400 22px/1.4 var(--serif);margin:0}.work-meta h3 button:hover{color:var(--accent)}.num{font-size:10px;color:var(--muted);padding-top:4px}.work-type{font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}.work-description{font-size:12px;color:var(--muted);margin:8px 0 0}.work-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:24px}.work-bottom p{font-size:11px;color:var(--muted);margin:0}.more{background:var(--accent);color:var(--paper);border:1px solid var(--accent);border-radius:24px;padding:10px 20px;font-size:11px}
+/* Films use the same editorial grid and a dark orange feature panel. */
+.motion{background:var(--accent);color:var(--paper)}.motion .section-head{border-color:#dca88e}.motion .section-head h2,.motion .section-no,.motion .section-head p{color:var(--paper)}.motion-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.video-project{display:grid;grid-template-columns:1fr .9fr;gap:24px;align-items:start}.video-project+.video-project{border-left:1px solid #dca88e;padding-left:30px}.video-shell{position:relative;background:#30231c;min-width:0}.video-shell video{aspect-ratio:9/16;width:100%;height:auto;object-fit:contain}.video-play{position:absolute;inset:0;border:0;background:transparent;color:white;display:flex;align-items:end;justify-content:center;padding-bottom:25px;font-size:12px}.video-play span{background:var(--paper);color:var(--accent);padding:12px 18px}.video-copy{padding-top:10px;min-width:0}.video-copy h3{font:400 27px/1.35 var(--serif);margin:15px 0}.video-copy p{font-size:12px;line-height:1.85}.video-index{font-size:9px;letter-spacing:.1em}.video-role{font-size:11px!important;border-top:1px solid #dca88e;padding-top:15px;margin-top:24px}.motion .tag{border-color:#dca88e}.video-error{font-size:12px;padding:10px}
+.reporting{display:grid;grid-template-columns:1fr 1.3fr;gap:50px;border-top:1px solid var(--accent);padding-top:24px}.reporting h2{font:400 var(--heading)/1.15 var(--serif);color:var(--accent);letter-spacing:-.04em;margin:12px 0}.reporting p{font-size:13px;color:var(--muted);max-width:410px}.report-placeholder{aspect-ratio:16/9;border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:var(--soft)}.placeholder-icon{font:400 36px var(--serif);color:var(--accent)}.report-placeholder strong{font:400 24px var(--serif)}.report-placeholder p{font-size:12px;margin:8px 0 0}.contact{padding-block:45px;border-block:3px double var(--accent)}.contact-inner{display:grid;grid-template-columns:1fr 1.3fr;gap:45px;align-items:center}.contact h2{font:400 var(--heading)/1.1 var(--serif);color:var(--accent);margin:12px 0}.contact-note{font-size:12px;color:var(--muted)}.contact-links{display:flex;flex-direction:column;align-items:start;gap:13px}.contact-links a{border-bottom:1px solid var(--accent);font-size:15px;padding-bottom:5px;overflow-wrap:anywhere}.footer{display:flex;justify-content:space-between;gap:25px;padding-block:25px;font-size:10px;color:var(--muted)}.footer p{margin:0;max-width:620px}.footer a{white-space:nowrap}
+/* Case-study dialog and gallery. Native dialogs manage keyboard focus. */
+dialog{color:var(--ink);border:0}dialog::backdrop{background:#29251fc9}.project-dialog{width:min(1120px,calc(100% - 40px));max-height:90dvh;margin:auto;padding:0;background:var(--paper);overflow:auto;overscroll-behavior:contain}.dialog-bar{position:sticky;top:0;z-index:2;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:14px 30px}.close{border:1px solid var(--line);background:none;min-width:44px;height:44px;font-size:22px}.dialog-body{padding:40px}.dialog-title{font:400 clamp(30px,4vw,54px)/1.2 var(--serif);letter-spacing:-.035em;margin:15px 0 22px}.dialog-intro{max-width:690px;color:var(--muted);font-size:15px}.detail-meta{display:flex;gap:40px;margin:30px 0;padding:18px 0;border-block:1px solid var(--line)}.detail-meta div{max-width:600px}.detail-meta dt,.detail-grid h3{font-size:10px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;color:var(--accent)}.detail-meta dd{margin:0;font-size:13px}.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:26px 0 40px}.detail-grid p{font-size:13px;color:var(--muted);margin:0;line-height:1.85}.detail-gallery{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.detail-gallery.single{grid-template-columns:1fr;max-width:660px;margin:auto}.detail-gallery.cover-first>figure:first-child{grid-column:1/-1;width:58%;justify-self:center}.detail-gallery figure{margin:0;min-width:0}.detail-gallery button{border:0;padding:0;background:none;width:100%}.detail-gallery img{width:100%;height:auto}.detail-gallery figcaption{font-size:11px;color:var(--muted);margin:8px 0 20px}.detail-credit{font-size:11px;color:var(--muted);margin-top:25px}.lightbox{width:100%;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;background:#29251f;color:var(--paper);overflow:hidden}.lightbox .close{position:absolute;right:18px;top:16px;color:var(--paper);z-index:2}.lightbox img{width:100%;height:calc(100dvh - 125px);object-fit:contain;padding:60px 65px 10px}.lightbox-nav{position:absolute;top:46%;width:44px;height:56px;border:1px solid #687572;background:#29251f;color:white;font-size:24px}.lightbox-prev{left:12px}.lightbox-next{right:12px}.lightbox-caption{text-align:center;font-size:12px;margin:8px 48px;max-height:50px;overflow:hidden}.reveal{opacity:1}.animate-ready .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.animate-ready .reveal.visible{opacity:1;transform:none}
+/* Tablet: two story columns and a full-width briefs row. */
+@media(max-width:1000px){.about-grid{grid-template-columns:.65fr 2fr;gap:24px}.about-copy{grid-template-columns:1fr}.skill-groups{border-left:0;border-top:1px solid var(--line);padding:15px 0 0;display:grid;grid-template-columns:1fr 1fr}.front-grid{grid-template-columns:1.3fr 1fr;gap:22px}.front-column{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:24px}.front-column>article:first-child{display:grid;grid-template-columns:1fr 1fr;gap:15px}.front-column>article:first-child .news-image{grid-row:1/5}.front-column>article:first-child .news-kicker{margin-top:0}.front-column .brief{margin:0}.front-column .news-title{font-size:20px}.motion-grid{gap:26px}.video-project{grid-template-columns:1fr}.video-shell{max-width:300px}.video-project+.video-project{padding-left:26px}.video-copy h3{font-size:25px}.video-role{margin-top:15px}.work-meta h3{font-size:20px}}
+/* Mobile: a readable single-column front page, then a two-column work index. */
+@media(max-width:720px){html{scroll-padding-top:85px}.nav{min-height:70px}.brand{font-size:22px;padding:23px 0}.edition{display:none}.nav-end{border:0;width:auto}.lang{top:13px;right:var(--space)}.menu{display:block;position:absolute;left:calc(var(--space) - 10px);top:13px;font-size:11px}.navigation{display:none;position:absolute;left:0;right:0;top:70px;background:var(--paper);padding:14px var(--space) 22px;border-block:1px solid var(--line);flex-direction:column;gap:0;align-items:stretch}.navigation.open{display:flex}.navigation a{padding:12px 0;font-size:14px}.header{border-bottom:1px solid var(--line)}.hero{padding-block:24px 18px}.hero h1{font-size:clamp(49px,12vw,85px);margin-bottom:16px}.hero-strip{font-size:9px;letter-spacing:.03em;flex-wrap:wrap;justify-content:center;gap:7px 15px}.hero-strip p:first-child{width:100%}.about{padding-block:24px 32px}.about-grid{grid-template-columns:1fr;gap:18px}.about-heading{border:0;padding:0;display:grid;grid-template-columns:1fr 1fr;align-items:end}.about-heading .section-no{grid-column:1/-1}.about h2{font-size:29px;margin:8px 0 0}.about-note{margin:0;font-size:10px;max-width:none;text-align:right}.about-copy{gap:18px}.about-text p{font-size:13px}.skill-groups{gap:20px}.section-head{display:block;margin-bottom:20px;padding-top:16px}.section-head p{margin-top:14px;max-width:none}.section-head h2{font-size:37px}.front-grid{grid-template-columns:1fr;gap:26px;margin-bottom:32px}.lead-story .news-title{font-size:28px}.middle-column{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;align-items:start}.middle-column .brief{margin:0}.orange-story{padding:12px}.orange-story .news-title{font-size:21px}.front-column{grid-column:auto;grid-template-columns:1fr;gap:22px}.front-column>article:first-child{grid-template-columns:1fr 1.15fr}.front-column .brief{padding-top:13px}.archive-head h3{font-size:23px}.archive-head span{font-size:9px}.work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 16px}.work-meta h3{font-size:18px}.work-type{font-size:9px;letter-spacing:0}.work-description{font-size:11px}.num{display:none}.work-bottom{align-items:start}.more{padding:9px 13px}.motion-grid{grid-template-columns:1fr;gap:30px}.video-project{grid-template-columns:1fr 1fr;gap:20px}.video-project+.video-project{border-left:0;border-top:1px solid #dca88e;padding:30px 0 0}.video-copy{padding:0}.video-copy h3{font-size:22px}.video-copy p{font-size:11px}.reporting,.contact-inner{grid-template-columns:1fr;gap:24px}.reporting h2,.contact h2{font-size:37px}.report-placeholder{padding:22px}.footer{flex-direction:column;gap:12px}.project-dialog{width:100%;max-height:100dvh;height:100dvh}.dialog-bar{padding:10px 20px}.dialog-body{padding:27px 20px}.detail-meta{display:block}.detail-meta>div+div{margin-top:16px}.detail-grid{grid-template-columns:1fr;gap:20px;margin-bottom:30px}.detail-gallery{gap:14px}.detail-gallery.cover-first>figure:first-child{width:75%}.lightbox img{padding-inline:40px}.lightbox-nav{width:34px}.lightbox-prev{left:3px}.lightbox-next{right:3px}}
+@media(max-width:390px){.brand{font-size:19px}.middle-column{grid-template-columns:1fr}.video-project{grid-template-columns:1fr}.video-shell{width:100%;max-width:270px;margin:auto}.detail-gallery{grid-template-columns:1fr}.detail-gallery.cover-first>figure:first-child{width:100%}.work-meta h3{font-size:16px}}
+
+/* Profile, three category covers and image-only galleries. */
+.hero{padding-bottom:24px}.hero h1{margin-bottom:0}.profile-layout{display:grid;grid-template-columns:.7fr 1.3fr 1.15fr;gap:32px;align-items:start;margin-top:20px}.profile-placeholder{aspect-ratio:4/5;background:var(--soft);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-size:10px;letter-spacing:.1em}.profile-column img{width:100%;aspect-ratio:4/5;object-fit:cover}.profile-copy h2{font:400 clamp(29px,3vw,43px)/1.12 var(--serif);color:var(--accent);margin:0 0 20px;letter-spacing:-.045em}.profile-copy p{font-size:13px;line-height:1.95;margin:0 0 14px}.profile-copy p+p{color:var(--muted);font-size:12px}.profile-link{display:inline-flex;align-items:center;gap:18px;margin-top:15px;border-bottom:1px solid var(--accent);color:var(--accent);padding-bottom:5px;font-size:12px}.profile-link.pending{border-bottom:0;color:var(--muted);font-size:10px}.profile-skills{border-left:1px solid var(--line);padding-left:25px}.profile-skills h3{font-size:10px;letter-spacing:.1em;margin:0 0 12px}.tools{border-top:1px solid var(--line);padding-top:20px;margin-top:23px}.tools dl{margin:0}.tools dl div+div{margin-top:15px}.tools dt{font-size:10px;font-weight:600;color:var(--accent);margin-bottom:5px}.tools dd{font-size:11px;line-height:1.85;margin:0;color:var(--muted)}.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.category-card{border:0;border-bottom:1px solid var(--line);background:none;padding:0 0 18px;text-align:left;min-width:0}.category-cover{display:block;overflow:hidden;background:var(--soft);aspect-ratio:4/5}.category-cover img{width:100%;height:100%;object-fit:contain;transition:transform .35s}.category-card:hover img{transform:scale(1.02)}.category-label{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font:400 clamp(25px,3vw,38px)/1.3 var(--serif);color:var(--accent)}.category-label>span:last-child{font-size:22px;transition:transform .2s}.category-card:hover .category-label>span:last-child{transform:translate(3px,-3px)}.category-count{display:block;font-size:10px;margin-top:7px;color:var(--muted)}
+.gallery-dialog{width:min(1180px,calc(100% - 40px));max-height:92dvh;padding:0;background:var(--paper);overflow:auto;overscroll-behavior:contain}.gallery-dialog .dialog-bar h2{font:400 30px/1.2 var(--serif);margin:0;color:var(--accent)}.gallery-body{padding:28px 30px 40px}.image-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px;align-items:start}.gallery-item{margin:0;min-width:0}.gallery-image{border:0;background:var(--soft);padding:0;display:block;width:100%;overflow:hidden}.gallery-image img{width:100%;height:auto;transition:transform .3s}.gallery-image:hover img{transform:scale(1.015)}.gallery-item figcaption{font-size:11px;line-height:1.6;margin-top:10px;color:var(--muted)}.series-group{padding-bottom:26px;border-bottom:1px solid var(--line)}.series-group+.series-group{padding-top:30px}.series-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:15px}.series-heading h3{font:400 25px/1.3 var(--serif);color:var(--accent);margin:0}.series-heading span{font-size:10px;color:var(--muted);white-space:nowrap}.series-row{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 16px;scroll-snap-type:x proximity;scrollbar-color:var(--accent) var(--soft);scrollbar-width:thin}.series-row .gallery-item{flex:0 0 220px;scroll-snap-align:start}.lightbox{z-index:30}
+/* Equal video columns: separators cannot alter the player widths. */
+.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}.video-project,.video-project+.video-project{display:grid;grid-template-columns:1fr;gap:18px;border:0;padding:0;min-width:0}.video-shell{width:min(100%,280px);max-width:280px;margin-inline:auto}.video-shell video{width:100%;height:auto;aspect-ratio:9/16;object-fit:contain}.video-copy{max-width:380px;width:100%;margin-inline:auto;padding-top:0}.video-copy h3{margin-top:0}.video-role{margin-top:16px}
+@media(max-width:1000px){.profile-layout{grid-template-columns:200px 1fr;gap:26px}.profile-skills{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:25px}.profile-skills>h3{grid-column:1;grid-row:1;margin-bottom:0}.profile-skills>.tags{grid-column:1;grid-row:2;align-content:start}.tools{grid-column:2;grid-row:1/3;margin:0;border-top:0;border-left:1px solid var(--line);padding:0 0 0 25px}.image-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.profile-layout{grid-template-columns:1fr;gap:23px}.profile-column{display:flex;align-items:end;gap:20px}.profile-placeholder,.profile-column>img{width:150px;flex:0 0 150px}.profile-copy h2{font-size:34px}.profile-skills{grid-column:auto;display:block}.tools{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;margin-top:23px}.profile-skills h3{margin-bottom:12px}.category-grid{grid-template-columns:1fr;gap:24px}.category-card{display:grid;grid-template-columns:1fr 1fr;column-gap:22px;align-items:end;padding-bottom:20px}.category-cover{grid-column:1;grid-row:1/3}.category-label{grid-column:2;grid-row:1;font-size:31px;margin:0;align-self:end}.category-count{grid-column:2;grid-row:2;align-self:start;margin-top:8px}.gallery-dialog{width:100%;height:100dvh;max-height:100dvh;margin:0}.gallery-dialog .dialog-bar h2{font-size:26px}.gallery-body{padding:23px 20px 35px}.image-grid{gap:23px 15px}.series-row .gallery-item{flex-basis:205px}.series-heading h3{font-size:22px}.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.video-project,.video-project+.video-project{grid-template-columns:1fr;border:0;padding:0;gap:15px}.video-copy h3{font-size:20px}.video-copy p{font-size:11px}.video-play{padding:0 8px 16px}.video-play span{font-size:10px;padding:9px 10px}}
+@media(max-width:390px){.profile-placeholder,.profile-column>img{width:130px;flex-basis:130px}.category-label{font-size:27px}.image-grid{grid-template-columns:1fr}.motion-grid{grid-template-columns:1fr;gap:35px}.video-shell{width:100%;max-width:260px}}
+
+
+/* Editorial refinements: portrait introduction, ruled skill columns, and news-style category pages. */
+.profile-layout{grid-template-columns:250px minmax(0,1fr);gap:38px 50px;align-items:center}.profile-column{align-self:center}.profile-photo{width:250px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--soft)}.profile-photo img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;transform:scale(1.2);transform-origin:50% 35%}.profile-copy h2{font:400 clamp(38px,5vw,66px)/1.07 var(--serif);color:var(--ink);letter-spacing:-.045em;margin:0 0 13px}.profile-copy h2 em{color:var(--accent);font-weight:400}.profile-copy .profile-title{font-size:17px;letter-spacing:.035em;color:var(--accent);line-height:1.4;margin:0 0 23px}.profile-copy p:not(.profile-title){max-width:700px;font-size:13px;line-height:1.95}.profile-skills{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0 34px;border-left:0;border-block:1px solid var(--line);padding:25px 0;align-self:stretch}.profile-skills>h3{grid-column:1;grid-row:1;margin-bottom:13px}.profile-skills>.tags{grid-column:1;grid-row:2;align-content:start}.profile-skills .tag{font-size:11px;padding:6px 11px;line-height:1.5}.tools{grid-column:2;grid-row:1/3;border-top:0;border-left:1px solid var(--line);padding:0 0 0 34px;margin:0}.tools h3{margin-bottom:13px}
+.category-grid{gap:0;align-items:stretch;border-bottom:3px double var(--accent)}.category-card{display:flex;flex-direction:column;padding:18px 22px 24px;border:0;border-top:3px double var(--accent);min-width:0;align-items:stretch}.category-card:first-child{padding-left:0}.category-card:last-child{padding-right:0}.category-news{border-right:1px solid var(--line)}.category-series{border-left:1px solid var(--line)}.category-edition{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:13px;color:var(--accent)}.category-cover{width:100%;flex-shrink:0;aspect-ratio:4/5}.category-label{font:400 clamp(32px,4vw,50px)/1.05 var(--serif);margin-top:18px;letter-spacing:-.04em}.category-count{font-size:10px;margin-top:10px}.category-sport{background:var(--accent);color:var(--paper);border-color:var(--accent)}.category-sport .category-label,.category-sport .category-count,.category-sport .category-edition{color:var(--paper)}.category-sport .category-cover{background:#853719}.category-previews{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-top:1px solid var(--line);padding-top:16px;margin-top:20px}.category-previews>span{display:block;overflow:hidden;background:var(--soft)}.category-previews img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain}.category-sport .category-previews{border-color:#dca88e}.gallery-dialog{border-top:4px solid var(--accent)}.gallery-dialog .dialog-bar{border-bottom:3px double var(--accent)}.gallery-dialog .dialog-bar h2{font-size:38px}.gallery-item{border-bottom:1px solid var(--line);padding-bottom:12px}.gallery-item figcaption{font-family:var(--serif);font-size:15px;color:var(--ink)}.image-grid{gap:30px 22px}.series-heading h3{font-size:29px}.report-placeholder{border-top:4px solid var(--accent)}
+@media(max-width:1000px){.profile-layout{grid-template-columns:210px minmax(0,1fr);gap:30px}.profile-photo{width:210px}.profile-skills{grid-template-columns:1fr 1fr;padding:23px 0}.category-card{padding-inline:16px}.category-label{font-size:38px}.category-previews{gap:9px}}
+@media(max-width:720px){.profile-layout{grid-template-columns:150px minmax(0,1fr);gap:25px 22px;align-items:start}.profile-column{display:block;align-self:start;padding-top:7px}.profile-photo{width:150px}.profile-copy h2{font-size:35px}.profile-copy .profile-title{font-size:12px;letter-spacing:0;margin-bottom:15px}.profile-copy p:not(.profile-title){font-size:12px}.profile-skills{grid-column:1/-1;grid-template-columns:1fr;display:block;padding:20px 0}.tools{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;margin-top:22px}.profile-skills .tag{font-size:10px;padding:5px 9px}.category-grid{grid-template-columns:1fr;gap:28px;border-bottom:0}.category-card,.category-card:first-child,.category-card:last-child{padding:18px 18px 23px;display:grid;grid-template-columns:1.2fr 1fr;gap:0 20px;border:0;border-block:1px solid var(--accent);align-items:start}.category-edition{grid-column:1/-1;margin-bottom:13px}.category-cover{grid-column:1;grid-row:2/5}.category-label{grid-column:2;grid-row:2;font-size:36px;margin-top:0;align-self:start}.category-count{grid-column:2;grid-row:3;line-height:1.8;margin-top:10px;align-self:start}.category-previews{grid-column:2;grid-row:4;margin-top:16px;gap:8px;padding-top:12px}.category-news,.category-series{padding-inline:0!important}.category-sport{border-color:var(--accent)}.gallery-dialog .dialog-bar h2{font-size:29px}.gallery-item figcaption{font-size:13px}.series-heading h3{font-size:23px}}
+@media(max-width:450px){.profile-layout{grid-template-columns:1fr}.profile-column{padding-top:0}.profile-photo{width:160px}.profile-copy h2{font-size:39px}.profile-skills{grid-column:auto}.category-label{font-size:30px}.category-card{column-gap:16px}.profile-copy .profile-title{font-size:15px}}
+
+
+/* Compact editorial layout: adjust these tokens to change the overall scale. */
+:root{--display:clamp(45px,6.2vw,82px);--heading:clamp(30px,3.4vw,44px);--section:clamp(40px,4.3vw,60px)}
+.hero{padding-block:23px 20px}.hero h1{font-size:var(--display)}
+.profile-layout{grid-template-columns:190px minmax(0,1.3fr) minmax(260px,1fr);gap:30px;align-items:start}.profile-photo{width:190px}.profile-column{align-self:start;padding-top:8px}.profile-copy h2{font-size:clamp(28px,3vw,38px);line-height:1.15;margin-bottom:10px}.profile-copy .profile-title{font-size:13px;margin-bottom:18px}.profile-copy p:not(.profile-title){font-size:12px;line-height:1.9}.profile-skills{grid-column:auto;display:block;border-block:0;border-left:1px solid var(--line);padding:0 0 0 25px}.profile-skills h3{font-size:10px;margin-bottom:11px}.profile-skills .tag{font-size:10px;padding:5px 9px}.tools{margin-top:20px;border-left:0;border-top:1px solid var(--line);padding:19px 0 0}.profile-link{margin-top:9px}
+.category-grid{max-width:940px;margin-inline:auto}.category-card{padding-top:13px;padding-bottom:18px}.category-edition{font-size:9px;margin-bottom:10px}.category-cover{height:190px;aspect-ratio:auto}.category-cover img{width:100%;height:100%;object-fit:contain}.category-label{font-size:32px;margin-top:12px}.category-count{font-size:9px;margin-top:7px}.category-previews{margin-top:13px;padding-top:12px;gap:10px}.category-previews img{height:64px;width:100%;aspect-ratio:auto;object-fit:contain}.section-head{margin-bottom:22px}.section-head h2{font-size:var(--heading)}.section-head p{font-size:11px}
+.motion-grid{gap:36px}.video-project,.video-project+.video-project{grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:start}.video-shell{width:150px;max-width:150px;margin:0}.video-copy{margin:0;max-width:none;padding-top:5px}.video-copy h3{font-size:23px;line-height:1.35;margin-bottom:13px}.video-copy p{font-size:11px;line-height:1.85}.video-role{padding-top:12px;margin-top:16px}.video-play{padding:0 8px 16px}.video-play span{font-size:10px;padding:9px 10px}
+@media(max-width:1000px){.profile-layout{grid-template-columns:150px minmax(0,1.1fr) minmax(220px,1fr);gap:24px}.profile-photo{width:150px}.profile-copy h2{font-size:30px}.profile-skills{padding-left:20px}.video-project,.video-project+.video-project{grid-template-columns:130px minmax(0,1fr);gap:18px}.video-shell{width:130px;max-width:130px}.video-copy h3{font-size:21px}}
+@media(max-width:720px){.hero h1{font-size:clamp(43px,9.5vw,65px)}.profile-layout{grid-template-columns:140px minmax(0,1fr);gap:24px}.profile-photo{width:140px}.profile-copy h2{font-size:29px}.profile-skills{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.profile-skills>h3{grid-column:1;grid-row:1}.profile-skills>.tags{grid-column:1;grid-row:2;align-content:start}.tools{grid-column:2;grid-row:1/3;margin:0;padding:0 0 0 20px;border-top:0;border-left:1px solid var(--line)}.category-grid{gap:20px}.category-card,.category-card:first-child,.category-card:last-child{grid-template-columns:1.15fr 1fr;padding-block:13px 16px}.category-cover{height:170px}.category-label{font-size:30px;margin-top:0}.category-previews{margin-top:12px;padding-top:10px}.category-previews img{height:54px}.motion-grid{grid-template-columns:1fr;gap:25px}.video-project,.video-project+.video-project{grid-template-columns:135px minmax(0,1fr);gap:22px}.video-project+.video-project{border-top:1px solid #dca88e;padding-top:25px}.video-shell{width:135px;max-width:135px}.video-copy h3{font-size:22px}.section-head h2{font-size:34px}}
+@media(max-width:450px){.profile-layout{grid-template-columns:1fr}.profile-photo{width:140px}.profile-copy h2{font-size:30px}.profile-skills{grid-column:auto;display:block}.tools{margin-top:20px;border-left:0;border-top:1px solid var(--line);padding:19px 0 0}.category-label{font-size:28px}.video-project,.video-project+.video-project{grid-template-columns:120px minmax(0,1fr);gap:16px}.video-shell{width:120px;max-width:120px}.video-copy h3{font-size:20px}.video-copy p{font-size:11px}}
+
+
+/* Masthead above navigation; modestly larger infographic covers. */
+html{scroll-padding-top:200px}
+@media(max-width:720px){html{scroll-padding-top:160px}}
+.header .nav{min-height:0;padding-top:0}.header .hero{width:100%;padding-block:27px 22px;border-bottom:0}.header .hero h1{margin:0;font-size:var(--display)}.nav-end{position:relative;min-height:43px;padding-inline:55px}.lang{top:0;right:0}.menu{top:0;left:0}.masthead-space{display:none}
+#work .category-grid{max-width:1040px}#work .category-cover{height:235px}#work .category-previews img{height:78px}
+@media(max-width:720px){.header .hero{padding-block:21px 18px}.header .hero h1{font-size:clamp(43px,9.5vw,65px)}.nav-end{width:100%;min-height:48px;border-block:1px solid var(--line)}.navigation{top:48px}.navigation.open{z-index:21}.lang,.menu{top:2px}.header{border-bottom:0}#work .category-cover{height:195px}#work .category-previews img{height:65px}}
+
+
+/* Full-width artwork: natural image proportions prevent side bars and cropping. */
+#work .category-cover{height:auto;aspect-ratio:auto;background:none;width:100%;overflow:hidden}
+#work .category-cover img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:initial}
+#work .category-previews{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+#work .category-previews>span{background:none;overflow:hidden}
+#work .category-previews img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:initial}
+@media(max-width:720px){#work .category-card{display:flex;flex-direction:column;align-items:stretch}#work .category-cover{height:auto}#work .category-label{margin-top:14px}#work .category-previews{margin-top:15px;padding-top:13px;gap:10px}#work .category-previews img{height:auto}}
+
+
+/* Equal category geometry and compact report grid. */
+#work .category-card,#work .category-card:first-child,#work .category-card:last-child{padding:16px 20px 22px;min-width:0;line-height:1.5;border-top:3px double var(--accent)}
+#work .category-cover{aspect-ratio:4/5;height:auto;width:100%}#work .category-cover img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+#work .category-label{font-size:32px;line-height:1.1;min-height:36px;margin-top:15px}#work .category-count{font-size:10px;line-height:1.5;min-height:15px;margin-top:9px}
+#work .category-previews{margin-top:16px;padding-top:14px;gap:8px}#work .category-previews img{aspect-ratio:4/5;object-fit:cover;width:100%;height:auto}
+.reports-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}.report-card{min-width:0;border-bottom:1px solid var(--line);padding-bottom:16px}.report-card h3{font:400 17px/1.45 var(--serif);margin:13px 0 0}.report-shell{width:100%;max-width:none;margin:0}.report-shell video{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}.report-shell .video-play{padding-bottom:14px}.report-shell .video-play span{padding:9px 12px;font-size:10px}
+@media(max-width:1000px){.reports-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#work .category-card,#work .category-card:first-child,#work .category-card:last-child{padding-inline:15px}}
+@media(max-width:720px){#work .category-card,#work .category-card:first-child,#work .category-card:last-child{padding:15px 18px 20px!important}#work .category-label{font-size:30px;line-height:1.1;margin-top:14px}#work .category-previews{gap:10px}.reports-grid{gap:22px 15px}.report-card h3{font-size:14px}.report-shell .video-play span{font-size:9px;padding:8px}}
+@media(max-width:390px){.reports-grid{grid-template-columns:1fr}.report-card h3{font-size:17px}}
+
+
+/* A single news-report player with previous/next controls. */
+.reporting-player-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;border-top:1px solid var(--accent);padding-top:23px;align-items:start}.reporting-intro h2{font:400 var(--heading)/1.1 var(--serif);letter-spacing:-.045em;color:var(--accent);margin:10px 0 20px}.reporting-intro p{font-size:12px;line-height:1.9;color:var(--muted);max-width:380px}.report-feature{min-width:0}.report-feature .report-shell{width:100%;max-width:none}.report-caption{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-top:16px}.report-caption h3{font:400 21px/1.4 var(--serif);margin:0}.report-position{font-size:10px;letter-spacing:.08em;color:var(--muted);white-space:nowrap}.report-controls{display:flex;justify-content:space-between;margin-top:18px;padding-top:12px;border-top:1px solid var(--line);gap:20px}.report-controls button{background:none;border:0;padding:7px 0;min-height:40px;font-size:12px;color:var(--accent)}.report-controls button:hover{text-decoration:underline}
+@media(max-width:720px){.reporting-player-layout{grid-template-columns:1fr;gap:24px}.reporting-intro h2{font-size:34px;margin-bottom:15px}.report-caption h3{font-size:19px}.report-controls{margin-top:15px}}
+
+
+/* Keep section descriptions immediately beneath their headings. */
+#work .section-head,#video .section-head{display:block}#work .section-head p,#video .section-head p{max-width:650px;margin-top:15px;font-size:12px;line-height:1.85}
+html[lang=zh-Hant] .hero h1{letter-spacing:.08em;font-size:clamp(39px,5.8vw,72px)}html[lang=zh-Hant] .profile-copy h2{letter-spacing:-.025em}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.animate-ready .reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main" data-zh="跳至內容" data-en="Skip to content">跳至內容</a>
+<header class="header"><div class="wrap nav"><section class="hero" aria-label="Portfolio introduction"><h1 data-zh="作品集" data-en="PORTFOLIO">作品集</h1></section><div class="nav-end"><nav class="navigation" id="navigation" aria-label="Main navigation"><a href="#about" data-zh="關於我" data-en="About Me">關於我</a><a href="#work" data-zh="資訊圖像" data-en="Infographics">資訊圖像</a><a href="#video" data-zh="短片" data-en="Short-form Videos">短片</a><a href="#reporting" data-zh="新聞報道" data-en="News Reporting">新聞報道</a></nav><button class="lang" id="language" type="button" aria-label="Switch to English">EN</button><button class="menu" id="menu" aria-controls="navigation" aria-expanded="false" type="button" data-zh="選單 +" data-en="Menu +">選單 +</button></div></div></header>
+<main id="main">
+
+<section class="section wrap about" id="about"><span class="section-no" data-zh="01 / 關於我" data-en="01 / ABOUT ME">01 / 關於我</span><div class="profile-layout"><div class="profile-column"><div class="profile-photo"><img data-asset="profile-photo" alt="Yingsuet 個人照片 / Portrait of Yingsuet" width="900" height="900" decoding="async"></div></div><div class="profile-copy"><h2><span data-zh="你好，我是" data-en="Hi, I am">你好，我是</span> <em>Yingsuet</em></h2><p class="profile-title" data-zh="多媒體記者" data-en="Multimedia Journalist">多媒體記者</p><p data-zh="具逾5年廣播及數碼新聞經驗，從事新聞撰稿、配音及多媒體內容製作。工作涵蓋資訊圖像、影片剪接、直播，以及社交媒體和網站內容發布。擅於整理資訊、掌握報道重點，並與編輯及製作團隊協作，在緊迫時限內完成製作。" data-en="Multimedia journalist with over five years of experience in broadcast and digital news. My work spans news scripting, voice-over reporting, infographics, video editing, live-stream production, and content publishing for social media and websites. I organise information, identify key points and work with editorial and production teams to deliver content under tight deadlines.">具逾5年廣播及數碼新聞經驗，從事新聞撰稿、配音及多媒體內容製作。工作涵蓋資訊圖像、影片剪接、直播，以及社交媒體和網站內容發布。擅於整理資訊、掌握報道重點，並與編輯及製作團隊協作，在緊迫時限內完成製作。</p><div id="profile-link"></div></div><aside class="profile-skills"><h3 data-zh="主要技能" data-en="KEY SKILLS">主要技能</h3><div class="tags"><span class="tag" data-zh="新聞寫作" data-en="News writing">新聞寫作</span><span class="tag" data-zh="撰稿及配音" data-en="Scripting & voice-over">撰稿及配音</span><span class="tag" data-zh="社交媒體及網站發布" data-en="Social & web publishing">社交媒體及網站發布</span><span class="tag" data-zh="資訊圖像" data-en="Infographics">資訊圖像</span><span class="tag" data-zh="影片剪接" data-en="Video editing">影片剪接</span><span class="tag" data-zh="直播製作" data-en="Live-stream production">直播製作</span></div><div class="tools"><h3 data-zh="數碼及 AI 工具" data-en="DIGITAL &amp; AI TOOLS">數碼及 AI 工具</h3><div class="tags"><span class="tag">Adobe Premiere Pro</span><span class="tag">Adobe Photoshop</span><span class="tag">Adobe Audition</span><span class="tag">Adobe Lightroom</span><span class="tag">Final Cut Pro</span><span class="tag">Canva</span><span class="tag">CapCut</span><span class="tag">ChatGPT</span></div></div></aside></div></section>
+<section class="section wrap" id="work"><div class="section-head"><div><span class="section-no" data-zh="02 / 資訊圖像" data-en="02 / INFOGRAPHICS">02 / 資訊圖像</span><h2 data-zh="精選作品" data-en="SELECTED WORK">精選作品</h2></div><p data-zh="負責整理資訊、撰寫標題及文案，以及視覺設計、排版和圖片處理。點擊分類瀏覽作品。" data-en="Responsible for information organisation, headlines and copy, visual design, layout and image editing. Select a category to view the work.">負責整理資訊、撰寫標題及文案，以及視覺設計、排版和圖片處理。點擊分類瀏覽作品。</p></div><div class="category-grid"><button class="category-card category-news" data-category="news" aria-haspopup="dialog" aria-label="Browse News"><span class="category-cover"><img data-asset="1210_GOOGLE" alt="Google 反壟斷調查" width="1080" height="1350" loading="lazy"></span><span class="category-label"><span data-zh="新聞" data-en="News">新聞</span><span aria-hidden="true">↗</span></span><span class="category-count" id="count-news"></span><span class="category-previews" aria-hidden="true"><span><img data-asset="0722_MARTIN" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="0424_U" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="0429_DISNEY" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="1022_ICELAND" alt="" loading="lazy" width="1080" height="1350"></span></span></button><button class="category-card category-sport" data-category="sport" aria-haspopup="dialog" aria-label="Browse Sports"><span class="category-cover"><img data-asset="0724_CHOI" alt="蔡俊彥世界排名第一" width="1080" height="1350" loading="lazy"></span><span class="category-label"><span data-zh="體育" data-en="Sports">體育</span><span aria-hidden="true">↗</span></span><span class="category-count" id="count-sport"></span><span class="category-previews" aria-hidden="true"><span><img data-asset="1209_SU" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="0201_TENNIS" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="1118_FOOTBALL" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="1120_FENCING" alt="" loading="lazy" width="1080" height="1350"></span></span></button><button class="category-card category-series" data-category="series" aria-haspopup="dialog" aria-label="Browse Series"><span class="category-cover"><img data-asset="1011_BORDER_000" alt="皇崗口岸交通指南" width="1080" height="1350" loading="lazy"></span><span class="category-label"><span data-zh="系列" data-en="Series">系列</span><span aria-hidden="true">↗</span></span><span class="category-count" id="count-series"></span><span class="category-previews" aria-hidden="true"><span><img data-asset="1011_BORDER_000" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="1011_BORDER_001" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="1011_BORDER_002" alt="" loading="lazy" width="1080" height="1350"></span><span><img data-asset="1011_BORDER_003" alt="" loading="lazy" width="1080" height="1350"></span></span></button></div></section>
+<section class="section motion" id="video"><div class="wrap"><div class="section-head reveal"><div><span class="section-no" data-zh="03 / 短片" data-en="03 / SHORT-FORM VIDEOS">03 / 短片</span><h2 data-zh="精選作品" data-en="SELECTED WORK">精選作品</h2></div><p data-zh="負責選取素材、編排內容及影片剪接。" data-en="Responsible for footage selection, content sequencing and video editing.">負責選取素材、編排內容及影片剪接。</p></div><div class="motion-grid">
+<article class="video-project reveal"><div class="video-shell"><video id="panda-video" playsinline controls preload="none" data-poster="panda-poster" aria-label="加加得得成長紀錄"></video><button class="video-play" data-video="panda"><span data-zh="▶ 播放影片" data-en="▶ Play film">▶ 播放影片</span></button><p class="video-error" hidden data-zh="影片暫時無法播放。" data-en="The video could not be played.">影片暫時無法播放。</p></div><div class="video-copy"><h3 data-zh="加加、得得成長紀錄" data-en="Jia Jia & De De: Growing Up">加加、得得成長紀錄</h3><p data-zh="整理不同成長階段的照片及影片，剪輯成大熊貓加加、得得的成長紀錄。" data-en="Photographs and footage from different stages of the giant panda twins’ development, edited into a chronological growing-up story.">整理不同成長階段的照片及影片，剪輯成大熊貓加加、得得的成長紀錄。</p></div></article>
+<article class="video-project reveal"><div class="video-shell"><video id="racing-video" playsinline controls preload="none" data-poster="racing-poster" aria-label="全運會車輛模型（遙控車）項目短片"></video><button class="video-play" data-video="racing"><span data-zh="▶ 播放影片" data-en="▶ Play film">▶ 播放影片</span></button><p class="video-error" hidden data-zh="影片暫時無法播放。" data-en="The video could not be played.">影片暫時無法播放。</p></div><div class="video-copy"><h3 data-zh="全運會車輛模型（遙控車）項目" data-en="National Games: Model Car (RC) Event">全運會車輛模型（遙控車）項目</h3><p data-zh="結合畫面及訪問內容，剪輯成直式新聞短片。" data-en="Footage and interviews edited into a vertical news video.">結合畫面及訪問內容，剪輯成直式新聞短片。</p></div></article>
+</div></div></section>
+<!-- NEWS REPORTING: Selected supplied reports; add confirmed publication dates when available. -->
+<section class="section wrap" id="reporting"><div class="reporting-player-layout"><div class="reporting-intro"><span class="section-no" data-zh="04 / 新聞報道" data-en="04 / NEWS REPORTING">04 / 新聞報道</span><h2 data-zh="近期作品" data-en="LATEST WORK">近期作品</h2><p data-zh="負責新聞撰稿、報道編排及配音。" data-en="Responsible for news scripting, story structure and voice-over narration.">負責新聞撰稿、報道編排及配音。</p></div><div class="report-feature"><div class="video-shell report-shell"><video id="report-current-video" playsinline controls preload="none" data-poster="report-fire-poster" aria-labelledby="report-current-title"></video><button id="report-play" class="video-play" data-video="report-fire" data-player="report-current-video"><span data-zh="▶ 播放影片" data-en="▶ Play film">▶ 播放影片</span></button><p class="video-error" hidden data-zh="影片暫時無法播放。" data-en="The video could not be played.">影片暫時無法播放。</p></div><div class="report-caption"><h3 id="report-current-title" aria-live="polite"></h3><span id="report-position" class="report-position"></span></div><div class="report-controls" aria-label="News report navigation"><button id="report-previous" type="button" data-zh="← 上一條" data-en="← Previous">← 上一條</button><button id="report-next" type="button" data-zh="下一條 →" data-en="Next →">下一條 →</button></div></div></div></section>
+
+
+</main>
+<footer class="wrap footer"><div><p>© <span id="current-year">2026</span> yingsuet_portfolio</p><p data-zh="作品刊載於香港電台，圖片及影片保留原有素材來源標示。" data-en="Work published by RTHK. Original source credits are retained in the images and videos.">作品刊載於香港電台，圖片及影片保留原有素材來源標示。</p></div><a href="#top" data-zh="返回頂部 ↑" data-en="Back to top ↑">返回頂部 ↑</a></footer>
+<dialog class="gallery-dialog" id="gallery-dialog" aria-labelledby="gallery-title"><div class="dialog-bar"><h2 id="gallery-title"></h2><button class="close" id="gallery-close" type="button" aria-label="Close gallery">×</button></div><div class="gallery-body" id="gallery-body"></div></dialog>
+<dialog class="lightbox" id="lightbox" aria-label="Artwork gallery"><button class="close" id="lightbox-close" type="button" aria-label="Close image">×</button><img id="lightbox-image" alt=""><button class="lightbox-nav lightbox-prev" id="previous" type="button" aria-label="Previous image">‹</button><button class="lightbox-nav lightbox-next" id="next" type="button" aria-label="Next image">›</button><p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p></dialog>
+<noscript><p class="wrap">請啟用 JavaScript 以瀏覽作品及播放影片。Please enable JavaScript to view the portfolio.</p></noscript>
+<!-- EDITING GUIDE
+  1. CONTACT.linkedin controls the profile link; blank shows a labelled placeholder.
+  2. PROJECTS contains bilingual titles and image groups; categories are news, sport, series.
+     Copy an existing object to add a project; put image IDs in its images array.
+     Series images stay together in one horizontal row; arrows stay within that series.
+  3. ASSETS stores embedded pictures. Values can also be replaced with your own image URLs.
+  4. VIDEOS stores embedded MP4 data. Files are decoded only when Play is pressed.
+  5. Replace the #reporting placeholder when news reports are supplied.
+-->
+<script>
+// Add the confirmed LinkedIn URL here. Leave blank to show a labelled placeholder.
+const CONTACT = { linkedin: 'https://www.linkedin.com/in/yingsuetliu' };
+const PROJECTS = [
+  {
+    "id": "1210_google",
+    "category": "news",
+    "title": [
+      "Google 反壟斷調查",
+      "Google antitrust investigation"
+    ],
+    "images": [
+      "1210_GOOGLE"
+    ]
+  },
+  {
+    "id": "0722_martin",
+    "category": "news",
+    "title": [
+      "馬丁路德金調查紀錄",
+      "Martin Luther King Jr. investigation records"
+    ],
+    "images": [
+      "0722_MARTIN"
+    ]
+  },
+  {
+    "id": "0429_disney",
+    "category": "news",
+    "title": [
+      "香港迪士尼財政表現",
+      "Hong Kong Disneyland financial results"
+    ],
+    "images": [
+      "0429_DISNEY"
+    ]
+  },
+  {
+    "id": "0424_u",
+    "category": "news",
+    "title": [
+      "亞洲大學排名",
+      "Asia university rankings"
+    ],
+    "images": [
+      "0424_U"
+    ]
+  },
+  {
+    "id": "1022_iceland",
+    "category": "news",
+    "title": [
+      "冰島首次發現蚊子",
+      "Mosquitoes discovered in Iceland"
+    ],
+    "images": [
+      "1022_ICELAND"
+    ]
+  },
+  {
+    "id": "0930_british",
+    "category": "news",
+    "title": [
+      "英國移民居留規則",
+      "UK immigration settlement rules"
+    ],
+    "images": [
+      "0930_BRITISH"
+    ]
+  },
+  {
+    "id": "1211_us",
+    "category": "news",
+    "title": [
+      "美國入境社交媒體紀錄要求",
+      "Social media records for US entry"
+    ],
+    "images": [
+      "1211_US"
+    ]
+  },
+  {
+    "id": "1209_nvida",
+    "category": "news",
+    "title": [
+      "Nvidia H200 晶片出口",
+      "Nvidia H200 chip exports"
+    ],
+    "images": [
+      "1209_NVIDA"
+    ]
+  },
+  {
+    "id": "0716_taxi",
+    "category": "news",
+    "title": [
+      "的士電子支付及行程紀錄",
+      "Taxi payments and trip recording"
+    ],
+    "images": [
+      "0716_TAXI"
+    ]
+  },
+  {
+    "id": "0328_charger",
+    "category": "news",
+    "title": [
+      "民航流動充電器規定",
+      "Power-bank rules on flights"
+    ],
+    "images": [
+      "0328_CHARGER"
+    ]
+  },
+  {
+    "id": "0508_mediation",
+    "category": "news",
+    "title": [
+      "國際調解院海事爭議調解",
+      "Maritime dispute mediation"
+    ],
+    "images": [
+      "0508_MEDIATION"
+    ]
+  },
+  {
+    "id": "0523_havard",
+    "category": "news",
+    "title": [
+      "哈佛國際學生政策",
+      "Harvard international student policy"
+    ],
+    "images": [
+      "0523_HAVARD"
+    ]
+  },
+  {
+    "id": "0614_japan",
+    "category": "news",
+    "title": [
+      "日本地震傳言",
+      "Japan earthquake rumours"
+    ],
+    "images": [
+      "0614_JAPAN"
+    ]
+  },
+  {
+    "id": "0627_cinema",
+    "category": "news",
+    "title": [
+      "嘉禾結束香港影院業務",
+      "Golden Harvest Hong Kong cinema operations"
+    ],
+    "images": [
+      "0627_CINEMA"
+    ]
+  },
+  {
+    "id": "0930_tunnel",
+    "category": "news",
+    "title": [
+      "中九龍繞道通車安排",
+      "Central Kowloon Bypass opening"
+    ],
+    "images": [
+      "0930_TUNNEL"
+    ]
+  },
+  {
+    "id": "0520_transport",
+    "category": "news",
+    "title": [
+      "行人過路發聲裝置更新",
+      "Accessible pedestrian crossing signals"
+    ],
+    "images": [
+      "0520_TRANSPORT"
+    ]
+  },
+  {
+    "id": "0802_fire",
+    "category": "news",
+    "title": [
+      "全運會火炬設計",
+      "National Games torch design"
+    ],
+    "images": [
+      "0802_FIRE"
+    ]
+  },
+  {
+    "id": "0430_kol",
+    "category": "news",
+    "title": [
+      "KOL 及網絡紅人訪港",
+      "Online creators visit Hong Kong"
+    ],
+    "images": [
+      "0430_KOL"
+    ]
+  },
+  {
+    "id": "0327_redpanda",
+    "category": "news",
+    "title": [
+      "海洋公園小熊貓柔柔離世",
+      "Ocean Park red panda Rou Rou"
+    ],
+    "images": [
+      "0327_REDPANDA"
+    ]
+  },
+  {
+    "id": "0428_golden",
+    "category": "news",
+    "title": [
+      "黃金周西貢橋咀洲巡邏",
+      "Golden Week patrols at Sharp Island"
+    ],
+    "images": [
+      "0428_GOLDEN"
+    ]
+  },
+  {
+    "id": "0902_thai",
+    "category": "news",
+    "title": [
+      "泰國外國旅客數字",
+      "Thailand visitor figures"
+    ],
+    "images": [
+      "0902_THAI"
+    ]
+  },
+  {
+    "id": "0904_tram",
+    "category": "news",
+    "title": [
+      "葡萄牙纜車事故",
+      "Portugal funicular accident"
+    ],
+    "images": [
+      "0904_TRAM"
+    ]
+  },
+  {
+    "id": "0522_awards",
+    "category": "news",
+    "title": [
+      "香港電台紐約節入圍獎",
+      "RTHK New York Festivals finalist awards"
+    ],
+    "images": [
+      "0522_AWARDS"
+    ]
+  },
+  {
+    "id": "1204_pets",
+    "category": "news",
+    "title": [
+      "火災後動物救援",
+      "Animal rescue after the fire"
+    ],
+    "images": [
+      "1204_PETS"
+    ]
+  },
+  {
+    "id": "0108_frost",
+    "category": "news",
+    "title": [
+      "天文台霜凍警告",
+      "Frost warning"
+    ],
+    "images": [
+      "0108_FROST"
+    ]
+  },
+  {
+    "id": "0108_belt",
+    "category": "news",
+    "title": [
+      "保母車安全帶規定",
+      "Seat-belt rules for school transport"
+    ],
+    "images": [
+      "0108_BELT"
+    ]
+  },
+  {
+    "id": "0922_flood",
+    "category": "news",
+    "title": [
+      "水浸風險地點",
+      "Flood-risk locations"
+    ],
+    "images": [
+      "0922_FLOOD"
+    ]
+  },
+  {
+    "id": "0922_typhoon",
+    "category": "news",
+    "title": [
+      "樺加沙風暴信號安排",
+      "Typhoon Ragasa signal arrangements"
+    ],
+    "images": [
+      "0922_TYPHOON"
+    ]
+  },
+  {
+    "id": "0925_ce",
+    "category": "news",
+    "title": [
+      "香港全球金融中心指數",
+      "Hong Kong in the Global Financial Centres Index"
+    ],
+    "images": [
+      "0925_CE"
+    ]
+  },
+  {
+    "id": "0930_mida",
+    "category": "news",
+    "title": [
+      "維園中秋綵燈匯",
+      "Victoria Park Mid-Autumn lantern display"
+    ],
+    "images": [
+      "0930_MIDA"
+    ]
+  },
+  {
+    "id": "1209_su",
+    "category": "sport",
+    "title": [
+      "蘇炳添宣布退役",
+      "Su Bingtian retirement"
+    ],
+    "images": [
+      "1209_SU"
+    ]
+  },
+  {
+    "id": "1120_fencing",
+    "category": "sport",
+    "title": [
+      "香港劍擊全運會表現",
+      "Hong Kong fencing at the National Games"
+    ],
+    "images": [
+      "1120_FENCING"
+    ]
+  },
+  {
+    "id": "1118_football",
+    "category": "sport",
+    "title": [
+      "香港足球賽事結果",
+      "Hong Kong football match result"
+    ],
+    "images": [
+      "1118_FOOTBALL"
+    ]
+  },
+  {
+    "id": "1112_rugby",
+    "category": "sport",
+    "title": [
+      "香港男子七人欖球賽事",
+      "Hong Kong men's rugby sevens"
+    ],
+    "images": [
+      "1112_RUGBY"
+    ]
+  },
+  {
+    "id": "1110_handball",
+    "category": "sport",
+    "title": [
+      "香港男子手球賽事",
+      "Hong Kong men's handball"
+    ],
+    "images": [
+      "1110_HANDBALL"
+    ]
+  },
+  {
+    "id": "0929_chen",
+    "category": "sport",
+    "title": [
+      "全運跳水賽事",
+      "National Games diving"
+    ],
+    "images": [
+      "0929_CHEN"
+    ]
+  },
+  {
+    "id": "0923_karate_m",
+    "category": "sport",
+    "title": [
+      "亞運空手道男子團體形摘銅",
+      "Asian Games men's team kata bronze"
+    ],
+    "images": [
+      "0923_KARATE_M"
+    ]
+  },
+  {
+    "id": "0923_karate",
+    "category": "sport",
+    "title": [
+      "亞運空手道女子奪銀",
+      "Asian Games women's karate silver"
+    ],
+    "images": [
+      "0923_KARATE"
+    ]
+  },
+  {
+    "id": "0829_coleman",
+    "category": "sport",
+    "title": [
+      "黃澤林晉級美網 32 強",
+      "Coleman Wong reaches the US Open last 32"
+    ],
+    "images": [
+      "0829_COLEMAN"
+    ]
+  },
+  {
+    "id": "0823_coleman",
+    "category": "sport",
+    "title": [
+      "黃澤林首次大滿貫正賽",
+      "Coleman Wong Grand Slam main draw"
+    ],
+    "images": [
+      "0823_COLEMAN"
+    ]
+  },
+  {
+    "id": "0731_kaidak",
+    "category": "sport",
+    "title": [
+      "啟德體育園入場紀錄",
+      "Kai Tak Sports Park attendance record"
+    ],
+    "images": [
+      "0731_KAIDAK"
+    ]
+  },
+  {
+    "id": "0724_choi",
+    "category": "sport",
+    "title": [
+      "蔡俊彥世界排名第一",
+      "Choi Chun-yin: world No. 1"
+    ],
+    "images": [
+      "0724_CHOI"
+    ]
+  },
+  {
+    "id": "0528_fencing",
+    "category": "sport",
+    "title": [
+      "香港劍擊錦標賽預告",
+      "Hong Kong fencing championships"
+    ],
+    "images": [
+      "0528_FENCING"
+    ]
+  },
+  {
+    "id": "0522_cr7",
+    "category": "sport",
+    "title": [
+      "C 朗拿度聯賽冠軍",
+      "Cristiano Ronaldo league title"
+    ],
+    "images": [
+      "0522_CR7"
+    ]
+  },
+  {
+    "id": "0201_tennis",
+    "category": "sport",
+    "title": [
+      "艾卡拉斯澳網封王",
+      "Alcaraz wins the Australian Open"
+    ],
+    "images": [
+      "0201_TENNIS"
+    ]
+  },
+  {
+    "id": "border",
+    "category": "series",
+    "title": [
+      "皇崗口岸交通指南",
+      "Huanggang transport guide"
+    ],
+    "images": [
+      "1011_BORDER_000",
+      "1011_BORDER_001",
+      "1011_BORDER_002",
+      "1011_BORDER_003"
+    ]
+  },
+  {
+    "id": "election",
+    "category": "series",
+    "title": [
+      "立法會選舉結果",
+      "Legislative Council election results"
+    ],
+    "images": [
+      "1208_ELECT",
+      "1208_ELECT_001",
+      "1208_ELECT_002",
+      "1208_ELECT_003",
+      "1208_ELECT_004",
+      "1208_ELECT_005"
+    ]
+  },
+  {
+    "id": "budget",
+    "category": "series",
+    "title": [
+      "財政預算案重點",
+      "Budget highlights"
+    ],
+    "images": [
+      "0225_BUDGET_001",
+      "0225_BUDGET_002",
+      "0225_BUDGET_003"
+    ]
+  },
+  {
+    "id": "policy",
+    "category": "series",
+    "title": [
+      "施政報告重點",
+      "Policy Address highlights"
+    ],
+    "images": [
+      "0823_POLICY_000",
+      "0916_POLICY_001",
+      "0916_POLICY_002",
+      "0917_POLICY_001"
+    ]
+  }
+];
+const ASSETS = {"0225_BUDGET_001":"assets/0225_BUDGET_001.webp","0225_BUDGET_002":"assets/0225_BUDGET_002.webp","0225_BUDGET_003":"assets/0225_BUDGET_003.webp","0424_U":"assets/0424_U.webp","0429_DISNEY":"assets/0429_DISNEY.webp","0722_MARTIN":"assets/0722_MARTIN.webp","0724_CHOI":"assets/0724_CHOI.webp","0823_POLICY_000":"assets/0823_POLICY_000.webp","0916_POLICY_001":"assets/0916_POLICY_001.webp","0916_POLICY_002":"assets/0916_POLICY_002.webp","0917_POLICY_001":"assets/0917_POLICY_001.webp","1011_BORDER_000":"assets/1011_BORDER_000.webp","1011_BORDER_001":"assets/1011_BORDER_001.webp","1011_BORDER_002":"assets/1011_BORDER_002.webp","1011_BORDER_003":"assets/1011_BORDER_003.webp","1022_ICELAND":"assets/1022_ICELAND.webp","1118_FOOTBALL":"assets/1118_FOOTBALL.webp","1208_ELECT_001":"assets/1208_ELECT_001.webp","1208_ELECT_002":"assets/1208_ELECT_002.webp","1208_ELECT_003":"assets/1208_ELECT_003.webp","1208_ELECT_004":"assets/1208_ELECT_004.webp","1208_ELECT_005":"assets/1208_ELECT_005.webp","1209_SU":"assets/1209_SU.webp","1210_GOOGLE":"assets/1210_GOOGLE.webp","panda-poster":"assets/panda-poster.webp","racing-poster":"assets/racing-poster.webp","0201_TENNIS":"assets/0201_TENNIS.webp","0327_REDPANDA":"assets/0327_REDPANDA.webp","0328_CHARGER":"assets/0328_CHARGER.webp","0428_GOLDEN":"assets/0428_GOLDEN.webp","0430_KOL":"assets/0430_KOL.webp","0508_MEDIATION":"assets/0508_MEDIATION.webp","0520_TRANSPORT":"assets/0520_TRANSPORT.webp","0522_AWARDS":"assets/0522_AWARDS.webp","0522_CR7":"assets/0522_CR7.webp","0523_HAVARD":"assets/0523_HAVARD.webp","0528_FENCING":"assets/0528_FENCING.webp","0614_JAPAN":"assets/0614_JAPAN.webp","0627_CINEMA":"assets/0627_CINEMA.webp","0716_TAXI":"assets/0716_TAXI.webp","0731_KAIDAK":"assets/0731_KAIDAK.webp","0802_FIRE":"assets/0802_FIRE.webp","0823_COLEMAN":"assets/0823_COLEMAN.webp","0829_COLEMAN":"assets/0829_COLEMAN.webp","0902_THAI":"assets/0902_THAI.webp","0904_TRAM":"assets/0904_TRAM.webp","0923_KARATE":"assets/0923_KARATE.webp","0923_KARATE_M":"assets/0923_KARATE_M.webp","0929_CHEN":"assets/0929_CHEN.webp","0930_BRITISH":"assets/0930_BRITISH.webp","0930_TUNNEL":"assets/0930_TUNNEL.webp","1110_HANDBALL":"assets/1110_HANDBALL.webp","1112_RUGBY":"assets/1112_RUGBY.webp","1120_FENCING":"assets/1120_FENCING.webp","1204_PETS":"assets/1204_PETS.webp","1208_ELECT":"assets/1208_ELECT.webp","1209_NVIDA":"assets/1209_NVIDA.webp","1211_US":"assets/1211_US.webp","profile-photo":"assets/profile-photo.webp","0108_FROST":"assets/0108_FROST.webp","0108_BELT":"assets/0108_BELT.webp","0922_FLOOD":"assets/0922_FLOOD.webp","0922_TYPHOON":"assets/0922_TYPHOON.webp","0925_CE":"assets/0925_CE.webp","0930_MIDA":"assets/0930_MIDA.webp","report-fire-poster":"assets/report-fire-poster.webp","report-stanley-poster":"assets/report-stanley-poster.webp","report-dogs-poster":"assets/report-dogs-poster.webp","report-wage-poster":"assets/report-wage-poster.webp","report-market-poster":"assets/report-market-poster.webp","report-wine-poster":"assets/report-wine-poster.webp","report-sport-poster":"assets/report-sport-poster.webp","report-tung-poster":"assets/report-tung-poster.webp"};
+const VIDEOS = {"panda":"assets/panda.mp4","racing":"assets/racing.mp4","report-fire":"assets/report-fire.mp4","report-stanley":"assets/report-stanley.mp4","report-dogs":"assets/report-dogs.mp4","report-wage":"assets/report-wage.mp4","report-market":"assets/report-market.mp4","report-wine":"assets/report-wine.mp4","report-sport":"assets/report-sport.mp4","report-tung":"assets/report-tung.mp4"};
+
+(() => {
+  'use strict';
+  let lang='zh', category=null, entries=[], imageEntries=[], imageIndex=0, galleryTrigger=null, imageTrigger=null;
+  const $=id=>document.getElementById(id);
+  const ui=(zh,en)=>lang==='zh'?zh:en;
+  const txt=pair=>pair[lang==='zh'?0:1];
+  const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const gallery=$('gallery-dialog'),lightbox=$('lightbox');
+  const labels={news:['新聞','News'],sport:['體育','Sports'],series:['系列','Series']};
+  const getAsset=id=>ASSETS[id]||'';
+  document.querySelectorAll('[data-asset]').forEach(img=>img.src=getAsset(img.dataset.asset));
+  document.querySelectorAll('[data-poster]').forEach(video=>video.poster=getAsset(video.dataset.poster));
+  function updateProfile(){
+    const url=CONTACT.linkedin.trim();
+    $('profile-link').innerHTML=url&&/^https?:\/\//i.test(url)?`<a class="profile-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>`:`<span class="profile-link pending">${ui('LinkedIn 網址待加入','LinkedIn link to be added')}</span>`;
+    for(const key of Object.keys(labels)){
+      const count=PROJECTS.filter(p=>p.category===key).length;
+      $('count-'+key).textContent=ui(`${count} 組作品 · 點擊瀏覽`,`${count} projects · View gallery`);
+    }
+  }
+  function figure(p,id,index){return `<figure class="gallery-item"><button class="gallery-image" type="button" data-gallery-image="${index}" aria-label="${esc(ui('放大：','Enlarge: ')+txt(p.title))}"><img src="${getAsset(id)}" alt="${esc(txt(p.title))}" width="1080" height="1350" loading="lazy" decoding="async"></button><figcaption>${esc(txt(p.title))}</figcaption></figure>`;}
+  function renderGallery(){
+    const projects=PROJECTS.filter(p=>p.category===category);entries=[];
+    $('gallery-title').textContent=txt(labels[category]);
+    if(category==='series'){
+      $('gallery-body').innerHTML=projects.map(p=>{
+        const images=p.images.map((id,i)=>{const index=entries.length;entries.push({p,id,number:i});return figure(p,id,index)}).join('');
+        return `<section class="series-group"><div class="series-heading"><h3>${esc(txt(p.title))}</h3><span>${ui(p.images.length+' 張',p.images.length+' images')}</span></div><div class="series-row" tabindex="0" role="region" aria-label="${esc(txt(p.title))}">${images}</div></section>`;
+      }).join('');
+    }else{
+      $('gallery-body').innerHTML='<div class="image-grid">'+projects.map(p=>p.images.map((id,i)=>{const index=entries.length;entries.push({p,id,number:i});return figure(p,id,index)}).join('')).join('')+'</div>';
+    }
+  }
+  function showImage(index){
+    imageIndex=(index+imageEntries.length)%imageEntries.length;
+    const entry=imageEntries[imageIndex];
+    $('lightbox-image').src=getAsset(entry.id);$('lightbox-image').alt=txt(entry.p.title)+' — '+(entry.number+1);
+    $('lightbox-caption').textContent=txt(entry.p.title)+` · ${imageIndex+1} / ${imageEntries.length}`;
+    $('previous').hidden=$('next').hidden=imageEntries.length<2;
+  }
+  document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{
+    category=button.dataset.category;galleryTrigger=button;renderGallery();gallery.showModal();gallery.scrollTop=0;document.body.classList.add('locked');
+  }));
+  gallery.addEventListener('click',event=>{
+    const button=event.target.closest('[data-gallery-image]');
+    if(button){const entry=entries[Number(button.dataset.galleryImage)];imageTrigger=button;
+      // Series navigation stays within the selected series; categories browse their full grid.
+      imageEntries=category==='series'?entries.filter(item=>item.p.id===entry.p.id):entries.slice();
+      showImage(imageEntries.findIndex(item=>item.id===entry.id));lightbox.showModal();
+    }else if(event.target===gallery){const r=gallery.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)gallery.close()}
+  });
+  $('gallery-close').addEventListener('click',()=>gallery.close());
+  gallery.addEventListener('close',()=>{document.body.classList.remove('locked');galleryTrigger?.focus()});
+  $('lightbox-close').addEventListener('click',()=>lightbox.close());
+  lightbox.addEventListener('close',()=>imageTrigger?.focus());
+  $('previous').addEventListener('click',()=>showImage(imageIndex-1));$('next').addEventListener('click',()=>showImage(imageIndex+1));
+  lightbox.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();showImage(imageIndex-1)}if(event.key==='ArrowRight'){event.preventDefault();showImage(imageIndex+1)}});
+  let touchX=null;lightbox.addEventListener('touchstart',event=>{touchX=event.touches[0].clientX},{passive:true});
+  lightbox.addEventListener('touchend',event=>{if(touchX!==null){const d=event.changedTouches[0].clientX-touchX;if(Math.abs(d)>55)showImage(imageIndex+(d<0?1:-1));touchX=null}},{passive:true});
+  function closeMenu(){$('navigation').classList.remove('open');$('menu').setAttribute('aria-expanded','false')}
+  function setLanguage(next){
+    lang=next;document.documentElement.lang=lang==='zh'?'zh-Hant':'en';
+    document.querySelectorAll('[data-zh][data-en]').forEach(el=>el.textContent=el.dataset[lang]);
+    $('language').textContent=lang==='zh'?'EN':'繁';$('language').setAttribute('aria-label',ui('Switch to English','切換至繁體中文'));
+    $('menu').setAttribute('aria-label',ui('開關選單','Toggle menu'));
+    for(const [id,zh,en] of [['gallery-close','關閉作品集','Close gallery'],['lightbox-close','關閉圖片','Close image'],['previous','上一張','Previous image'],['next','下一張','Next image']])$(id).setAttribute('aria-label',ui(zh,en));
+    document.querySelectorAll('[data-category]').forEach(button=>button.setAttribute('aria-label',ui('瀏覽：','Browse ')+txt(labels[button.dataset.category])));
+    lightbox.setAttribute('aria-label',ui('作品圖片','Artwork gallery'));
+    updateProfile();updateReportTitle();if(gallery.open)renderGallery();if(lightbox.open)showImage(imageIndex);
+    try{localStorage.setItem('yinsuet-portfolio-language',lang)}catch{}
+  }
+  $('language').addEventListener('click',()=>setLanguage(lang==='zh'?'en':'zh'));
+  $('menu').addEventListener('click',()=>{$('menu').setAttribute('aria-expanded',String($('navigation').classList.toggle('open')))});
+  document.querySelectorAll('.navigation a').forEach(a=>a.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+  document.querySelectorAll('a[href="#top"]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();closeMenu();window.scrollTo({top:0,left:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
+  // One report player; switching never starts playback automatically.
+  const REPORTS = [{"key": "report-fire", "title": ["宏福苑火災報告回應", "Response to the Wang Fuk Court fire report"]}, {"key": "report-stanley", "title": ["One Stanley 調查", "One Stanley investigation"]}, {"key": "report-dogs", "title": ["元朗女子疑被狗襲擊後死亡", "Suspected fatal dog attack in Yuen Long"]}, {"key": "report-wage", "title": ["外傭最低工資", "Minimum wage for foreign domestic helpers"]}, {"key": "report-market", "title": ["維園年宵攤位競投", "Victoria Park Lunar New Year fair stall auction"]}, {"key": "report-wine", "title": ["美酒佳餚巡禮", "Hong Kong Wine & Dine Festival"]}, {"key": "report-sport", "title": ["武術及單車運動員備戰亞運", "Asian Games preparations: wushu and cycling"]}, {"key": "report-tung", "title": ["新華社評述董建華", "Xinhua commentary on Tung Chee-hwa"]}];
+  let reportIndex=0;
+  function updateReportTitle(){
+    $('report-current-title').textContent=txt(REPORTS[reportIndex].title);
+    $('report-position').textContent=String(reportIndex+1).padStart(2,'0')+' / '+String(REPORTS.length).padStart(2,'0');
+  }
+  function selectReport(index){
+    reportIndex=(index+REPORTS.length)%REPORTS.length;
+    const report=REPORTS[reportIndex],video=$('report-current-video'),button=$('report-play');
+    video.pause();video.removeAttribute('src');delete video.dataset.loadedKey;video.load();video.poster=getAsset(report.key+'-poster');
+    button.dataset.video=report.key;button.hidden=false;button.disabled=false;
+    button.parentElement.querySelector('.video-error').hidden=true;updateReportTitle();
+  }
+  $('report-previous').addEventListener('click',()=>selectReport(reportIndex-1));
+  $('report-next').addEventListener('click',()=>selectReport(reportIndex+1));
+  updateReportTitle();
+
+  // Videos stay embedded in the file, but are decoded into a Blob only on demand.
+  const videoUrls={};
+  document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',async()=>{
+    const key=button.dataset.video,video=button.dataset.player?$(button.dataset.player):$(key+'-video');button.disabled=true;
+    try{if(video.dataset.loadedKey!==key){video.src=VIDEOS[key];video.dataset.loadedKey=key;video.load()}button.hidden=true;await video.play();}catch{if(button.dataset.video===key){button.hidden=false;button.parentElement.querySelector('.video-error').hidden=false;}}finally{if(button.dataset.video===key)button.disabled=false}
+  }));
+  document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==v)other.pause()})));
+  window.addEventListener('pagehide',()=>document.querySelectorAll('video').forEach(v=>v.pause()));
+
+  let saved='zh';try{saved=localStorage.getItem('yinsuet-portfolio-language')||'zh'}catch{}setLanguage(saved==='en'?'en':'zh');$('current-year').textContent=new Date().getFullYear();
+  const anchors=[...document.querySelectorAll('.navigation a')],sections=anchors.map(a=>document.querySelector(a.getAttribute('href')));let scheduled=false;
+  function activeNav(){scheduled=false;let active=-1;sections.forEach((section,i)=>{if(section.getBoundingClientRect().top<160)active=i});anchors.forEach((a,i)=>{a.classList.toggle('active',i===active);if(i===active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}
+  addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(activeNav)}},{passive:true});activeNav();
+})();
+</script>
+</body>
+</html>
